@@ -1,9 +1,8 @@
 mod color;
+mod video;
 
 fn main() {
-    let image_path = "/mnt/c/Users/Albert/Downloads/fish_sam.jpeg";
-    let img = image::open(image_path).unwrap();
-    let result = color::image_to_ansi(&img, 200, 100);
-    color::print_image(result);
+    let video_path = "/mnt/c/Users/Albert/Downloads/nyx_mouse.mp4";
+    video::extract_frames(video_path);
 }
 
